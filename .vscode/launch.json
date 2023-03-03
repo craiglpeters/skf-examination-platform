@@ -2,10 +2,14 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "command": "./node_modules/.bin/astro dev",
-      "name": "Development server",
       "request": "launch",
-      "type": "node-terminal"
+      "name": "Deno Debug",
+      "type": "node",
+      "program": "${workspaceFolder}/packages/workers/kubernetes.ts",
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "deno",
+      "runtimeArgs": ["run", "--inspect-wait", "--allow-all", "--unstable", "--allow-read=$HOME/.kube", "--allow-net", "--allow-env", "-Ldebug"],
+      "attachSimplePort": 9229
     }
   ]
 }
