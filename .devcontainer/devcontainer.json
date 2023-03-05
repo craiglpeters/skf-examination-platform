@@ -13,11 +13,14 @@
 		},
 		"ghcr.io/mpriscella/features/kind:1": {},
 		"ghcr.io/eitsupi/devcontainer-features/jq-likes:1": {
-      "jqVersion": "none",
-      "yqVersion": "latest",
-      "gojqVersion": "none"
-    }
+		      "jqVersion": "none",
+		      "yqVersion": "latest",
+		      "gojqVersion": "none"
+	    }
 	},
+	"overrideFeatureInstallOrder": [
+	    "ghcr.io/devcontainers/features/jq-likes"
+	],
 	"customizations": {
 		"vscode": {
 			"extensions": [
